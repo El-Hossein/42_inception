@@ -1,4 +1,4 @@
-_This project has been created as part of the 42 curriculum by <user>._
+_This project has been created as part of the 42 curriculum by <username>._
 
 # Inception
 
@@ -23,7 +23,7 @@ All services run in isolated containers, communicate through a Docker network, a
 ### Prerequisites
 - Virtual Machine (Debian/Ubuntu)
 - Docker and Docker Compose
-- Domain configured in `/etc/hosts`: `127.0.0.1 <user>.42.fr`
+- Domain configured in `/etc/hosts`: `127.0.0.1 <username>.42.fr`
 
 ### Installation
 ```bash
@@ -33,9 +33,9 @@ make
 ```
 
 ### Access
-- WordPress: `https://<user>.42.fr`
-- Adminer: `https://<user>.42.fr/adminer/`
-- Static site: `http://<user>.42.fr:8080`
+- WordPress: `https://<username>.42.fr`
+- Adminer: `https://<username>.42.fr/adminer/`
+- Static site: `http://<username>.42.fr:8080`
 
 ### Commands
 - `make` - Build and start
@@ -55,7 +55,7 @@ make
 **Custom Docker Network** provides isolation and automatic DNS between containers. **Host Network** has no isolation and is forbidden in this project.
 
 ### Docker Volumes vs Bind Mounts
-**Bind Mounts** (used here) map directly to `/home/<user>/data/` for easy backup. **Docker Volumes** are managed by Docker in `/var/lib/docker/volumes/`.
+**Bind Mounts** (used here) map directly to `/home/<username>/data/` for easy backup. **Docker Volumes** are managed by Docker in `/var/lib/docker/volumes/`.
 
 ## Resources
 

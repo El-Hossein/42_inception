@@ -31,29 +31,29 @@ make fclean
 ## Accessing Services
 
 ### WordPress
-- URL: `https://<user>.42.fr`
-- Admin: `https://<user>.42.fr/wp-admin`
+- URL: `https://<username>.42.fr`
+- Admin: `https://<username>.42.fr/wp-admin`
 - Username: Check `srcs/.env` (WP_ADMIN_N)
 - Password: `secrets/wp_admin_password.txt`
 
 ### Adminer
-- URL: `https://<user>.42.fr/adminer`
+- URL: `https://<username>.42.fr/adminer`
 - Server: `mariadb`
 - Username: Check `srcs/.env` (MYSQL_USER)
 - Password: `secrets/db_password.txt`
 
 ### Static Website
-- URL: `http://<user>.42.fr:8080`
+- URL: `http://<username>.42.fr:8080`
 
 ### FTP
-- Host: `<user>.42.fr`
+- Host: `<username>.42.fr`
 - Port: `21`
 - Username: Check `srcs/.env` (FTP_USER)
 - Password: `secrets/ftp_user_password.txt`
 
 ### Grafana
-- URL: `https://<user>.42.fr/grafana`
-- URL: `https://<user>.42.fr:3000`
+- URL: `https://<username>.42.fr/grafana`
+- URL: `https://<username>.42.fr:3000`
 - Username: admin
 - Password: default password (admin)
 
@@ -87,6 +87,6 @@ docker compose -f srcs/docker-compose.yml logs wordpress
 
 ### Test Website
 ```bash
-curl -k https://<user>.42.fr  # Should work
-curl http://<user>.42.fr      # Should fail
+curl -k https://<username>.42.fr  # Should work
+curl http://<username>.42.fr      # Should fail
 ```

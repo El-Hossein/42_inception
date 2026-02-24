@@ -126,25 +126,25 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /home/<user>/data/wordpress
+      device: /home/<username>/data/wordpress
   mariadb_data:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /home/<user>/data/mariadb
+      device: /home/<username>/data/mariadb
   adminer_data:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /home/<user>/data/adminer
+      device: /home/<username>/data/adminer
   grafana_data:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /home/<user>/data/grafana
+      device: /home/<username>/data/grafana
 
 secrets:
   db_password:

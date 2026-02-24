@@ -26,7 +26,7 @@ cd inception
 ```bash
 sudo nano /etc/hosts
 ```
-Add: `127.0.0.1 <user>.42.fr`
+Add: `127.0.0.1 <username>.42.fr`
 
 ### 3. Create Secrets
 ```bash
@@ -42,10 +42,10 @@ chmod 600 secrets/*.txt
 ### 4. Configure Environment
 Edit `srcs/.env` with your settings:
 ```env
-DOMAIN_NAME=<user>.42.fr
+DOMAIN_NAME=<username>.42.fr
 MYSQL_DB=wordpress
 MYSQL_USER=wpuser
-WP_ADMIN_N=<user>
+WP_ADMIN_N=<username>
 FTP_USER=ftpuser
 ```
 
@@ -97,23 +97,23 @@ docker volume inspect srcs_wordpress_data
 
 ### Check Data
 ```bash
-ls -la /home/<user>/data/wordpress
-ls -la /home/<user>/data/mariadb
+ls -la /home/<username>/data/wordpress
+ls -la /home/<username>/data/mariadb
 ```
 
 ### Backup
 ```bash
 docker exec srcs-mariadb-1 mysqldump -u root -p$(cat secrets/db_root_password.txt) --all-databases > backup.sql
-sudo tar -czf wp-backup.tar.gz /home/<user>/data/wordpress
+sudo tar -czf wp-backup.tar.gz /home/<username>/data/wordpress
 ```
 
 ## Data Persistence
 
 Data is stored on the host and persists through container restarts:
 
-- **MariaDB**: `/home/<user>/data/mariadb` → `/var/lib/mysql`
-- **WordPress**: `/home/<user>/data/wordpress` → `/var/www/html`
-- **Adminer**: `/home/<user>/data/adminer` → `/var/www/adminer`
+- **MariaDB**: `/home/<username>/data/mariadb` → `/var/lib/mysql`
+- **WordPress**: `/home/<username>/data/wordpress` → `/var/www/html`
+- **Adminer**: `/home/<username>/data/adminer` → `/var/www/adminer`
 
 ## Service Architecture
 ```
